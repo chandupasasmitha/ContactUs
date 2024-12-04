@@ -1,0 +1,144 @@
+<html>
+<head>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+			background-color: rgb(9, 25, 40);
+        }
+        .contact-form {
+            width: 350px;
+            margin: 0 auto;
+			margin-right: 112;
+			margin-top: -280;
+            padding: 30px;
+            background: #f1f1f1;
+            border: 1px solid #cfcfcf;
+            border-radius: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cfcfcf;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="navbar">
+		<img src="L2.jpg" alt="Bubble tea shop" class="logo">
+
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">ABOUT US</a></li>
+			<li><a href="#">MENU</a></li>
+			<li><a href="#">CONTACT US</a></li>
+			<li><a href="#">BRANCHES</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="site-banner">
+			<!-- <div class="header-menu">
+				
+				<span id="menu-icon" onClick="toggleMenu()"><img src="image 01.jpg" /></span>
+				<span id="header-right-menu"> 
+					<a href="#">Home</a> 
+					<a href="#">About Us</a> 
+					<a href="#">Menu</a>
+					<a href="#" class="header-active">Contact</a>
+					<a href="#">Branches</a>
+				</span>
+			</div> -->
+			<h1 class="heading">CONTACT US</h1>
+		</div>
+		<div class="footer">
+			
+			<div class="footer-column"><a href="https://maps.app.goo.gl/9xALomnZdSecdJLB8"><img class="map-image" src="map.png" /></a></div>
+			<div class="footer-column">
+				<div class="tile-content">
+					<h1>Meet Us</h1>
+					<div class="call">
+						<img src="call.png" width="30" height="30"><span class="tile-field">+94717646067</span>
+					</div>
+					<div class="mail">
+						<img src="email-icon.png" width="30" height="30"><span class="tile-field">contact@admin.com</span>
+					</div>
+					<div class="location">
+						<img src="location.png" width="30" height="30"><span class="tile-field">Bandaranayake Mawatha, Moratuwa</span>
+					</div>
+				</div>
+				<div class="follow">
+					<h2>Follow Us</h2>
+					<div class="call">
+						<a href="https://www.facebook.com"><img src="facebook-logo.png" width="30" height="30"></a><span class="tile-field"></span>                     
+						<a href="https://www.instaram.com"><img src="instaram-logo.png" width="30" height="30"></a><span class="tile-field"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-container">
+				<div class="content-container">
+					<h3>BOBALICIOUS</h3>
+					<p>Haven't you tried the most delicious bubble tea in the world? <br>Come enjoy and realize the difference</p>
+					<ul class="socials">
+						<li><a href="#"><i class="fa fa-facebook"></i> </a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i> </a></li>
+						<li><a href="#"><i class="fa fa-youtube"></i> </a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i> </a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i> </a></li>
+					</ul>
+					<h4>copyright @2024 BOBALICIOUS. design by sashikala</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if(name == "" || email == "" || message == "") {
+                alert("Please fill out all fields.");
+            } else {
+                alert("Thank you, " + name + ". Your message has been sent successfully!");
+            }
+        });
+    </script>
+
+	<script>
+		function toggleMenu() {
+			var menuElement = document.getElementById("header-right-menu");
+			if (menuElement.style.display === "block") {
+				menuElement.style.display = "none";
+			} else {
+				menuElement.style.display = "block";
+			}
+		}
+	</script>
+</body>
+</html>
